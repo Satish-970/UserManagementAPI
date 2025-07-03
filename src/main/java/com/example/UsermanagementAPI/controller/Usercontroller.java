@@ -19,9 +19,10 @@ public class Usercontroller {
    @Autowired // This annotation is used to inject the UserRepositry bean
     private UserRepositry userRepositry;
    @PostMapping
-    public ResponseEntity<User> createUser(@Valid @RequestBody User user) {
+    public ResponseEntity<List<User>> createUser(@Valid @RequestBody List<User> user) {
         // This method will handle POST requests to create a new user
-        User savedUser = userRepositry.save(user);
+        List<User> savedUser = userRepositry.saveAll(user);
+        // Save the user to the database and return the saved user in the response
         return ResponseEntity.status(HttpStatus.CREATED).body(savedUser);
     }
     @GetMapping
