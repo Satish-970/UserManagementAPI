@@ -20,31 +20,8 @@ public class User {
     @NotBlank(message = "Email is mandatory")
     @Email(message = "Email should be valid")
     private String email;
-    @Column(name = "Created At" , updatable = false)
-    @CreationTimestamp
-    private java.time.LocalDateTime createdAt;
-
-    public LocalDateTime getUpdatedAt() {
-        return updatedAt;
-    }
-
-    public void setUpdatedAt(LocalDateTime updatedAt) {
-        this.updatedAt = updatedAt;
-    }
-
-    public LocalDateTime getCreatedAt() {
-        return createdAt;
-    }
-
-    public void setCreatedAt(LocalDateTime createdAt) {
-        this.createdAt = createdAt;
-    }
-
+   
     // This field will automatically be populated with the current timestamp when the entity is created
-    // The 'updatable = false' attribute indicates that this field should not be updated after
-    @Column(name = "Updated At")
-    @CreationTimestamp
-    private java.time.LocalDateTime updatedAt;
 
   public  User() {
         // Default constructor is required by JPA
