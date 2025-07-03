@@ -5,10 +5,11 @@ import com.example.UsermanagementAPI.repositry.UserRepositry;
 import jakarta.persistence.Id;
 import jakarta.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Page;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
-
+import org.springframework.data.domain.Pageable;
 import java.util.List;
 import java.util.Optional;
 
@@ -19,10 +20,9 @@ public class Usercontroller {
    @Autowired // This annotation is used to inject the UserRepositry bean
     private UserRepositry userRepositry;
    @PostMapping
-   public ResponseEntity<User> createUser(@Valid @RequestBody User user) {
+    public ResponseEntity<List<User>> createUser(@Valid @RequestBody List<User> user) {
         // This method will handle POST requests to create a new user
-        User savedUser = userRepositry.save(user);
-        
+        List<User> savedUser = userRepositry.saveAll(user);
         // Save the user to the database and return the saved user in the response
         return ResponseEntity.status(HttpStatus.CREATED).body(savedUser);
     }
@@ -30,6 +30,11 @@ public class Usercontroller {
     public List<User> getAllUsers() {
         // This method will handle GET requests to retrieve all users
         return userRepositry.findAll();
+    }
+    @GetMapping("/page")
+    public Page<User> getUsers(Pageable pageable){
+        // This method will handle GET requests to retrieve users with pagination
+        return userRepositry.findAll(pageable);
     }
     @GetMapping("/{id}")
     // This method will handle GET requests to retrieve a user by ID
