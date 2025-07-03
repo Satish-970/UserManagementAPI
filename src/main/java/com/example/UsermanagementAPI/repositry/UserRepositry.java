@@ -1,6 +1,7 @@
 package com.example.UsermanagementAPI.repositry;
 
 import com.example.UsermanagementAPI.model.User;
+
 import org.springframework.data.jpa.repository.JpaRepository;
 
 import java.util.List;
