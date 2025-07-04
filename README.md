@@ -84,8 +84,7 @@ Supports `?page=0&size=5&sort=name,asc` for pagination & sorting.
 - Maven 3+
 
 ### 🚀 Steps
-
-```bash
+```
 # Clone the repo
 git clone https://github.com/Satish-970/UserManagementAPI.git
 cd UserManagementAPI
@@ -95,18 +94,16 @@ mvn clean install
 
 # Run the app
 mvn spring-boot:run
-
-
+```
+<pre>
 🌐 Postman Collection
 You can test endpoints using Postman.
 📦 Download Collection (optional: upload your Postman collection JSON here if available)
-
+</pre>
 📊 GitHub Stats
 <p align="center"> <img src="https://github-readme-stats.vercel.app/api?username=satish-970&show_icons=true&theme=radical" /> <img src="https://streak-stats.demolab.com?user=satish-970&theme=radical" /> </p>
 🤝 Contributing
 Contributions are welcome! Please fork the repo and submit a pull request.
-
-
 📬 Satish Pakalapati
 
 
