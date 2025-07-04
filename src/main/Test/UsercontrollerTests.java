@@ -36,3 +36,25 @@ public class UsercontrollerTests {
 
 
 }
+ this.user1 = savedInitialUsers.get(0);
+        this.user2 = savedInitialUsers.get(1);
+
+        manyUsers = IntStream.rangeClosed(1, 25)
+                .mapToObj(i -> new User("User " + i, "user" + i + "@example.com"))
+                .collect(Collectors.toList());
+        userRepositry.saveAll(manyUsers);
+    }
+
+    @Test
+    public void TestGetUserByIdFound() throws Exception {
+        mockMvc.perform(get("/api/users/{id}", user1.getId())
+                        .contentType(MediaType.APPLICATION_JSON))
+                .andExpect(status().isOk())
+                .andExpect(jsonPath("$.id",is(user1.getId().intValue())))
+                .andExpect(jsonPath("$.name", is(user1.getName())))
+                .andExpect(jsonPath("$.email", is(user1.getEmail())));
+    }
+
+
+
+}
