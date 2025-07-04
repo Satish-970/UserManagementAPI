@@ -12,7 +12,7 @@
 
 ## 🚀 About the Project
 
-**UserManagementAPI** is a RESTful Spring Boot application that provides CRUD operations for managing users. It supports features like pagination, sorting, validation, and a clean JSON-based API.
+**UserManagementAPI** is a RESTful Spring Boot application that provides operations for managing users. It supports features like pagination, sorting, validation, and a clean JSON-based API.
 
 ---
 
