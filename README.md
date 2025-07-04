@@ -18,11 +18,11 @@
 
 ## 🔥 Features
 
-- ✅ Create, Read, Update, Delete (CRUD) users
+- ✅ Create, Read, Update, Delete users
 - ✅ Pagination and sorting
 - ✅ Input validation using `@Valid`
 - ✅ Exception handling with meaningful responses
-- ✅ In-memory H2 Database
+- ✅ In-memory PostgreSQL Database
 - ✅ JUnit & MockMvc test coverage
 
 ---
@@ -30,13 +30,14 @@
 ## 📽️ Demo Preview
 
 <p align="center">
-  <img src="https://github.com/Satish-970/UserManagementAPI/assets/74038190/efb9fc8d-52c5-4e75-814f-fb48d01d7c26" alt="API Preview" width="90%" />
+  <h1>Link:"http://localhost:8080/api/users"</h1>
+  <img src="https://github.com/Satish-970/UserManagementAPI/blob/main/%7BE6FA2981-6A0A-42AC-98AD-BBBD3031FAC3%7D.png" alt="API Preview" width="90%" />
 </p>
 
 ---
 
 ## 📂 Project Structure
-
+<pre>
 UserManagementAPI/
 │
 ├── controller/ # REST Controllers
@@ -46,6 +47,7 @@ UserManagementAPI/
 ├── test/Unit Testing# JUnit test cases
 └── resources/
 ├── application.properties
+ </pre>
 
 
 ---
