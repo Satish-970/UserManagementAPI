@@ -98,6 +98,10 @@ mvn spring-boot:run
 <pre>
 🌐 Postman Collection
 You can test endpoints using Postman.
+  <p align="center">
+  <h3>Using Postman for populating the database from API</h3>
+  <img src="https://github.com/Satish-970/UserManagementAPI/blob/main/%7BE6FA2981-6A0A-42AC-98AD-BBBD3031FAC3%7D.png" alt="API Preview" width="90%" />
+</p>
 📦 Download Collection (optional: upload your Postman collection JSON here if available)
 </pre>
 📊 GitHub Stats
