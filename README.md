@@ -3,7 +3,7 @@
 </h1>
 
 <p align="center">
-  <img src="https://img.shields.io/badge/Spring%20Boot-2.7.0-brightgreen?style=for-the-badge&logo=spring-boot" />
+  <img src="https://img.shields.io/badge/Spring%20Boot-6.2.7-brightgreen?style=for-the-badge&logo=spring-boot" />
   <img src="https://img.shields.io/badge/Java-24-blue?style=for-the-badge&logo=openjdk" />
   <img src="https://img.shields.io/badge/Status-Active-success?style=for-the-badge" />
 </p>
