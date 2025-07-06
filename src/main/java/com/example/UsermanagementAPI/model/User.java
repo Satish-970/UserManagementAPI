@@ -4,12 +4,14 @@ import jakarta.persistence.*;
 import jakarta.validation.constraints.Email;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.Size;
+import lombok.*;
 import org.hibernate.annotations.CreationTimestamp;
 
 import java.time.LocalDateTime;
 
 @Table(name = "users") // This annotation specifies the name of the table in the database
-@Entity // This annotation indicates that this class is a JPA entity
+@Entity
+@Data // This annotation indicates that this class is a JPA entity
 public class User {
     @Id // This annotation specifies that this field is the primary key
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -25,22 +27,15 @@ public class User {
     @Column(name = "created_at", updatable = false)
     private java.time.LocalDateTime createdAt;
 
-    public LocalDateTime getUpdatedAt() {
-        return updatedAt;
+    public User(String name, String email) {
+        this.name=name;
+        this.email=email;
+
     }
 
-    public void setUpdatedAt(LocalDateTime updatedAt) {
-        this.updatedAt = updatedAt;
-    }
 
-    public LocalDateTime getCreatedAt() {
-        return createdAt;
-    }
-
-    public void setCreatedAt(LocalDateTime createdAt) {
-        this.createdAt = createdAt;
-    }
-
+    @Getter
+    @Setter
     @CreationTimestamp
 
     @Column(name = "updated_at")
@@ -50,29 +45,7 @@ public class User {
         // Default constructor is required by JPA
   }
 
-    public Long getId() {
-        return id;
-    }
 
-    public void setId(Long id) {
-        this.id = id;
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public String getEmail() {
-        return email;
-    }
-
-    public void setEmail(String email) {
-        this.email = email;
-    }
 
     @Override
     public String toString() {
